@@ -10,7 +10,7 @@ export const BlogList = () => {
 
 
     useEffect (() => {
-        getBlogs ().then((blogs) => {
+        getBlogs().then((blogs) => {
             setBlogs(blogs);
             setFilteredBlogs(blogs)
         });
@@ -25,7 +25,7 @@ export const BlogList = () => {
     }
 
     const onTyping = (e) => {
-        setInputValue (e.target.value)
+        setInputValue(e.target.value)
         const fBlogs = blogs.filter(blog => blog.title.includes(inputValue))
         setFilteredBlogs(fBlogs)
     }
