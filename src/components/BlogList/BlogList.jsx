@@ -33,7 +33,7 @@ export const BlogList = () => {
     if (blogs.length === 0) return <div>  Loading....</div>
     return (
         <div className='blogList'>
-            <input value = {inputValue} type="text" onChange = {onTyping}/>
+            <input value = {inputValue} placeholder = "Type something..." type="text" onChange = {onTyping}/>
             <button onClick={onRefresh}>Refresh page</button>
             {filteredBlogs.map((post, index) => (
                <div className='blogItem' key={index}>
